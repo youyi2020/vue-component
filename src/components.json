@@ -1,0 +1,6 @@
+{
+  "button": {
+    "path": "./packages/button/index.js",
+    "cnName": "按钮"
+  }
+}

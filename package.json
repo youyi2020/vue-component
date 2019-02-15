@@ -1,0 +1,73 @@
+{
+  "name": "tg-base",
+  "version": "0.0.1",
+  "description": "A Component Library for Vue.js.",
+  "main": "./dist/tg-base.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run before:build && cross-env NODE_ENV=production webpack --mode production --progress --config ./build/webpack.prod.conf.js",
+    "dev": "npm run before:dev && cross-env NODE_ENV=development webpack-dev-server --progress --colors --config ./build/webpack.demo.conf.js",
+    "watch": "npm run before:build && cross-env NODE_ENV=production webpack --mode production --progress --progress --watch --config ./build/webpack.prod.conf.js",
+    "new": "node ./build/bin/new-component.js",
+    "remove": "node ./build/bin/remove-component.js",
+    "build:entry": "node ./build/bin/build-entry.js",
+    "build:route": "node ./build/bin/build-route.js",
+    "before:dev": "npm run build:entry && npm run build:route",
+    "before:build": "npm run build:entry"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youyi2020/tg-base.git"
+  },
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "author": {
+    "name": "youyi.sun",
+    "email": "youyi.sun@aispeech.com"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^2.5.22"
+  },
+  "dependencies": {
+    "vue": "^2.5.22",
+    "vue-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-2": "^6.22.0",
+    "clean-webpack-plugin": "^1.0.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "cssnano": "^4.1.8",
+    "file-loader": "^1.1.11",
+    "file-save": "^0.2.0",
+    "fs-extra": "^7.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "json-templater": "^1.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss": "^7.0.10",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "uppercamelcase": "^3.0.0",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^15.5.1",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  }
+}

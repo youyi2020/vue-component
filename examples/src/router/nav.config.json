@@ -1,0 +1,13 @@
+{
+
+  "main": {
+    "path": "./src/components/main.vue",
+    "cnName": "首页",
+    "vueRouterHref": "/main"
+  },
+  "button": {
+    "path": "./src/doc/button.md",
+    "cnName": "按钮",
+    "vueRouterHref": "/button"
+  }
+}
